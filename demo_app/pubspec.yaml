@@ -1,0 +1,76 @@
+name: demo_app
+description: Flutter Widget from HTML demo app.
+version: 0.0.1
+publish_to: "none"
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  carousel_slider: ^4.0.0
+  flutter:
+    sdk: flutter
+  flutter_widget_from_html: any
+  flutter_widget_from_html_core: any
+  fwfh_chewie: any
+  fwfh_webview: any
+  html: any
+  http: any
+  logging: any
+  path_provider: any
+  photo_view: ^0.14.0
+  provider: ^6.0.0
+  url_launcher: any
+
+dependency_overrides:
+  flutter_widget_from_html:
+    path: ../packages/enhanced
+  flutter_widget_from_html_core:
+    path: ../packages/core
+  fwfh_cached_network_image:
+    path: ../packages/fwfh_cached_network_image
+  fwfh_chewie:
+    path: ../packages/fwfh_chewie
+  fwfh_just_audio:
+    path: ../packages/fwfh_just_audio
+  fwfh_svg:
+    path: ../packages/fwfh_svg
+  fwfh_url_launcher:
+    path: ../packages/fwfh_url_launcher
+  fwfh_webview:
+    path: ../packages/fwfh_webview
+
+dev_dependencies:
+  flutter_launcher_icons: ^0.13.1
+  flutter_test:
+    sdk: flutter
+  golden_toolkit: ^0.15.0
+  integration_test:
+    sdk: flutter
+  lint: any
+  measurer: ^2.1.1
+  test: any
+
+flutter:
+  assets:
+    - images/
+    - logos/
+    - test/goldens.json
+  fonts:
+    - family: Courier
+      fonts:
+        - asset: fonts/RobotoMono/RobotoMono-Regular.ttf
+    - family: Roboto
+      fonts:
+        - asset: packages/golden_toolkit/fonts/Roboto-Regular.ttf
+  uses-material-design: true
+
+flutter_launcher_icons:
+  image_path: logos/icon.png
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  macos:
+    generate: true
+  web:
+    generate: true

@@ -1,0 +1,10 @@
+include: package:lint/analysis_options.yaml
+
+analyzer:
+  exclude:
+    # TODO: remove this when it auto ignores `depend_on_referenced_packages`
+    - lib/generated_plugin_registrant.dart
+
+linter:
+  rules:
+    always_put_control_body_on_new_line: true
